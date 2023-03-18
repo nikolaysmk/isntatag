@@ -12,7 +12,7 @@ const openaiApi = new OpenAIApi(configuration);
 
 const bot = new TelegramBot(token, { polling: true });
 
-bot.on("message", async (msg, match) => {
+bot.on("message", async (msg) => {
   console.log(msg.text);
 
   const chatId = msg.chat.id;
